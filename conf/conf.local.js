@@ -24,7 +24,7 @@ exports.config = {
     //browser.ignoreSynchronization = true;`
     browser.waitForAngularEnabled(false);
     if (!process.env.SITE_URL) {
-      browser.params.baseUrl = 'https://sit.newsconnect.com.au';
+      browser.params.baseUrl = 'https://www.commbank.com.au/';
       // browser.params.baseUrl = 'http://localhost:3000';
     } else {  
       browser.params.baseUrl = process.env.SITE_URL;

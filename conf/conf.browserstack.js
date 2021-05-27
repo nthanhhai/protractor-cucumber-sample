@@ -49,7 +49,7 @@ exports.config = {
   onPrepare: function () {
     browser.waitForAngularEnabled(false);
     if (!process.env.SITE_URL) {
-      browser.params.baseUrl = 'https://www.google.com';
+      browser.params.baseUrl = 'https://www.commbank.com.au/';
     } else {
       browser.params.baseUrl = process.env.SITE_URL;
     }
