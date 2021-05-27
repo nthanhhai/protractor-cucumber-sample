@@ -26,12 +26,15 @@ var EverydayAccountsPage = require('../page_objects/everyday_accounts_po');
 // ===================GIVEN===================
 
 // ===================WHEN===================
-// When('Example', {
-//     timeout: 6 * 5000
-// }, async function (url) {
-//     var everdayAccountsPage = new EverydayAccountsPage();
+When('I click on Tell me how button in Concession card holders', {
+    timeout: 6 * 5000
+}, async function () {
+    var everdayAccountsPage = new EverydayAccountsPage();
 
-// });
+    await everdayAccountsPage.waitUntilVisible(everdayAccountsPage.tellMeHowConcessionCard, 3000);
+    await everdayAccountsPage.scrollIntoView(everdayAccountsPage.tellMeHowConcessionCard);
+    await everdayAccountsPage.tellMeHowConcessionCard.click();
+});
 
 // ===================THEN===================
 Then('I should see all types of Everyday accounts', {

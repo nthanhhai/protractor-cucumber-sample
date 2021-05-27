@@ -7,6 +7,8 @@ var EverdayAccounts = function () {
     this.bannerContent = element(by.cssContainingText('div.banner-content', 'Everyday accounts'));
     this.cardSection = element(by.css('div.card-section'));
     this.accountTypes = element.all(by.css('div.carditem'));
+    this.concessionCard = element(by.cssContainingText('div.card-container', 'Concession card holders'));
+    this.tellMeHowConcessionCard = this.concessionCard.element(by.cssContainingText('div.card-cta', 'Tell me how'));
     
     this.pageLoaded = function () {
         return this.isVisible(this.bannerContent)
