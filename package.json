@@ -4,11 +4,13 @@
   "description": "Sample of automation framework developed based on Protractor and Cucumber",
   "main": "index.js",
   "scripts": {
-    "test": "cross-env ./node_modules/protractor/bin/protractor conf/conf.browserstack.js"
+    "test-browserstack": "cross-env ./node_modules/protractor/bin/protractor conf/conf.browserstack.js",
+    "test-local": "cross-env ./node_modules/protractor/bin/protractor conf/conf.local.js"
   },
   "author": "Hai Nguyen",
   "license": "ISC",
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "cucumber": "^4.2.1",
     "cucumber-html-reporter": "^4.0.5",
     "cucumber-junit": "^1.7.1",
